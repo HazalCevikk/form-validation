@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: darkmagenta;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            width: 400px;  
+            position: absolute;
+            top: 60px; 
+            overflow: hidden;    
+        }
+        .header {
+            background-color: rgb(235, 227, 217);
+            padding: 20px 20px 20px 30px;
+            border-bottom: 1px solid #f1f1f1; 
+        }
+        .form{
+            margin: 30px 0 30px 0;
+            padding: 0 30px;
+            
+        }
+        .form-control {
+             position: relative;
+        }
+        .form-control label {
+            display: block;
+            padding-bottom: 3px;
+        }
+        .form-control input{
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
+        .form-control.success input{
+            border-color: #2ecc71;
+        }
+        .form-control.error input{
+            border-color: #e74c3c;
+        }
+        .form-control.success i.fa-circle-check {
+            color: #2ecc71;
+            visibility: visible;
+        }                
+        .form-control.error i.fa-circle-exclamation {
+            color: #e74c3c;
+            visibility: visible;
+        }    
+        .form-control.error small{
+            visibility: visible;
+            color: #e74c3c;
+            
+        }
+        button{
+        margin-top: 15px;
+        color: white;
+        background-color: darkmagenta;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border-color: darkmagenta;
+        }
+        .form-control small{
+            visibility: hidden;
+        }
+        .form-control i {
+            position: absolute;
+            right: 10px;
+            top: 33px;
+            visibility: hidden;                       
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">   
+            <h2>Create Account</h2>    
+        </div>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label>Username</label>
+                <input type="text" placeholder="Alifdadali" id="username">
+                <i class="fa-solid fa-circle-check"></i> 
+                <i class="fa-solid fa-circle-exclamation"></i>           
+                <small>Error Message</small>  
+            </div>            
+            <div class="form-control"> 
+                 <label>Email</label>
+                 <input type="text" placeholder="Alifdadali@gmail.com" id="Email">
+                 <i class="fa-solid fa-circle-check"></i>
+                 <i class="fa-solid fa-circle-exclamation"></i>
+                 <small>Error Message</small>
+            </div>  
+            <div class="form-control">  
+                 <label>Password</label>
+                 <input type="password" placeholder="Please enter your password" id="password">
+                 <i class="fa-solid fa-circle-check"></i>
+                 <i class="fa-solid fa-circle-exclamation"></i>
+                 <small>Error Message</small>
+            </div>  
+            <div class="form-control">  
+                 <label>Password check</label>
+                 <input type="password" placeholder="Please enter the password" id="password2">
+                 <i class="fa-solid fa-circle-check"></i>
+                 <i class="fa-solid fa-circle-exclamation"></i>
+                 <small>Error Message</small>
+            </div> 
+            <button>Submit</button>                 
+        </form>
+    </div>
+   
+    
+
+<script src="script.js"></script>
+</body>
+</html>
